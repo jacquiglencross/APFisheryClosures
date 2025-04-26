@@ -213,3 +213,5 @@ UV.best <- glmer(UorV ~  Closure + Sex +
                  family = binomial(link = "logit"), data = data_UV)
 summary(UV.best)
 
+
+#### end #####
