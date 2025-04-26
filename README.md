@@ -12,14 +12,14 @@ This script consists of the final GLMMs and LMMs using the Island Closure Experi
 This script contains the code to run the LMMs used to look at the effect of fishing on the relationship between the metrics. These models used the same random effect structure as used in the main manuscript.
 
 ## Completed scripts
-MS_models
-MS_ICEpanel_models
-MS_relationship_models
+1. MS_models
+2. MS_ICEpanel_models
+3. MS_relationship_models
 
 
 ## Still to be completed
-Calibrated school detection (merge all the settings into one file)
-Calibrated_fish_pipeline
-GPS pipeline
-TDR pipeline
-figures/maps
+1. Calibrated school detection (merge all the settings into one file)
+2. Calibrated_fish_pipeline
+3. GPS pipeline
+4. TDR pipeline
+5. figures/maps
