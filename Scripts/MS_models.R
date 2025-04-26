@@ -17,14 +17,15 @@ setwd("E:/Chapter 3 Fishery closures/")
 
 #load files and format data ####
 # data for the schools metric models
-fish_n  <- read.csv("Calibrated_STEP 4 CLUSTERED SCHOOLS.csv") %>%
+fish  <- read.csv("Calibrated_STEP 4 CLUSTERED SCHOOLS.csv") %>%
   filter(Exclude_below_line_depth_mean > -999) %>%
   dplyr::select(-X, -X.1) %>%
   filter(Depth_mean < 100) %>%# filter fish below 100 m, at end of pipeline we plotted them and they look erroneous
   filter(IslandYear != "Robben_2016") %>%
-  mutate(Time = hms(fish$Time_S),
+  mutate(Time = hms(Time_S),
          Year = as.factor(Year),
-         Month = as.factor(Month)) %>%
+         Month = as.factor(Month)) 
+fish_n  <- fish %>%
   dplyr::group_by(Year, Island, Closure, surveyID, Month) %>%
   dplyr::summarise(nschools = length(schoolID))# %>%
 
